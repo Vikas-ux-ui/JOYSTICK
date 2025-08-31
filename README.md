@@ -1,13 +1,30 @@
-# React + Vite
+# 🎮 JOYSTICK
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Joystick is a modern **Game Store web app** inspired by Steam, built with **React + Redux Toolkit + Vite**.  
+It allows users to browse, search, filter games by genre, and add them to a cart (stored in local storage).
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
+- 🕹️ Browse and explore games
+- 🔎 Search games by name
+- 🎭 Filter games by categories (Action, RPG, Shooter, Puzzle, etc.)
+- 🛒 Add to cart with local storage support
+- 🎨 Styled with Tailwind CSS + custom CSS
+- ⚡ Built with Vite for fast performance
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# JOYSTICK
+## 🛠️ Tech Stack
+- **Frontend:** React, Redux Toolkit, React Router
+- **Styling:** Tailwind CSS
+- **State Management:** Redux Toolkit
+- **Build Tool:** Vite
+
+---
+
+## 📂 Installation & Setup
+Clone the repository:
+```bash
+git clone https://github.com/Vikas-ux-ui/JOYSTICK.git
+cd JOYSTICK
