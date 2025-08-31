@@ -1,0 +1,66 @@
+/* index.css */
+
+.steam-carousel {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.steam-game-card {
+  background: linear-gradient(to right, #1b2838, #171a21);
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+}
+
+
+
+.hanime-toolbar {
+  position: fixed;
+  top: 100px;
+  width: 70%;
+ background-color: rgb(12, 45, 118);
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+  z-index: 1000;
+  height: 49px;
+  margin: 0 auto;
+}
+
+.hanime-toolbar__content {
+  display: flex;
+  align-items: center;
+  height: 56px;
+  padding: 0 16px;
+}
+
+.dropdown-menu .row {
+  min-width: 200px;
+}
+
+
+
+
+
+.search-card {
+  display: flex;
+  align-items: center;
+  background: rgba(255,255,255,0.1);
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.search-bar label {
+  margin-right: 8px;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.search-bar input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  width: 120px;
+}
