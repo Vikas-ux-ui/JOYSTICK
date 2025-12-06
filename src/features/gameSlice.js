@@ -18,17 +18,34 @@ export const gameSlice = createSlice({
     setUserGameCart:(state,action)=>{
       state.GameCart=[...state.GameCart,action.payload];
     },
-    setGameCart:(state,actions)=>{
-      console.log("action " ,actions.payload);
-      state.GameCart=[...state.GameCart,actions.payload];
-      const userData=JSON.parse(localStorage.getItem(`user${counter}`));
-      
-      userData.cart.push(actions.payload);
-      console.log(userData);
+    setGameCart: (state, action) => {
+      const game = action.payload;
 
-      localStorage.removeItem(`user${counter}`);
-      localStorage.setItem(`user${counter}`,JSON.stringify(userData));
+      if (!game) return;
 
+      // Add to in-memory Redux cart if not already present
+      if (!state.GameCart.some(g => g.id === game.id)) {
+        state.GameCart.push(game);
+      }
+
+      // Safely update the user's stored cart in localStorage
+      try {
+        const counterLocal = localStorage.getItem("counter");
+        const userKey = counterLocal ? `user${counterLocal}` : 'user';
+        const stored = localStorage.getItem(userKey);
+        if (!stored) return; // no logged-in user found, nothing to persist
+
+        const userData = JSON.parse(stored) || {};
+        userData.cart = userData.cart || [];
+
+        // Avoid duplicate entries in stored cart
+        if (!userData.cart.some(g => g.id === game.id)) {
+          userData.cart.push(game);
+          localStorage.setItem(userKey, JSON.stringify(userData));
+        }
+      } catch (err) {
+        console.error('Error updating stored user cart', err);
+      }
     },
     removeGameFromCart: (state, action) => {
 
