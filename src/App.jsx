@@ -16,7 +16,7 @@ function App() {
             display: "flex",
             flexDirection: "column",
             minHeight: "100vh",
-            backgroundColor: "#0e0e10",
+            backgroundColor: "#0909f2",
           }}
         >
           {/* Top Navbar */}
