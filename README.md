@@ -1,4 +1,4 @@
-# 🎮 JOYSTICK
+Yoo# 🎮 JOYSTICK
 
 Joystick is a modern **Game Store web app** inspired by Steam, built with **React + Redux Toolkit + Vite**.  
 It allows users to browse, search, filter games by genre, and add them to a cart (stored in local storage).
